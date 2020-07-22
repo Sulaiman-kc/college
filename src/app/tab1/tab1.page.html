@@ -1,17 +1,109 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header [translucent]="true" >
+ 
+  <ion-toolbar style="--background: rgb(189, 22, 22);">
+    <ion-row style="color: white;">
+      <ion-col size="9" >
+        <ion-title>
+          Profile
+        </ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-icon  style="float: right; margin: 0 10px;" (click)="presentPopover()" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" style="--background: white;">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list style="--background: white;margin: 0;padding: 0;border: none;">
+    <ion-item style="--background: white;border: none;">
+      <ion-thumbnail style="width: 100%;height: auto;--background: white;border: none;" >
+        <img style="width: 100%; border-radius: 10px;border: none;" src="assets/img/profile.png">
+      </ion-thumbnail>
+      <ion-label>hello</ion-label>
+    </ion-item>
+    <ion-row>
+      <ion-col size="8">
+        <ion-title style="font-family: 'Ubuntu Condensed', sans-serif; font-weight: 600;font-size: 30px; margin: 10px 0 10px 10px;">{{user.name}}</ion-title>
+      </ion-col>
+      <!-- <ion-col>
+        <ion-button *ngIf="!edit1" size="small" style="--border-radius: 10%;margin: 10px 0 10px 10px;" (click)="edit()">Edit
+        </ion-button>
+        <ion-button *ngIf="edit1" size="small" style="--border-radius: 10%;margin: 10px 0 10px 10px;" (click)="submit()">Save
+        </ion-button>
+      </ion-col> -->
+      <!-- <ion-button icon-only shape="round" color="blue" fill="clear">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button> -->
+    </ion-row>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-row style="margin: 0 10px 0 10px;" *ngIf="!edit1">
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">Mobile Number:</ion-title>
+        <ion-title class="text1">{{user.mobile}}</ion-title>
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">E-mail ID:</ion-title>
+        <ion-title class="text1">{{user.email}}</ion-title>
+      </ion-col>
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">Age:</ion-title>
+        <ion-title class="text1">{{user.age}}</ion-title>
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">Sex:</ion-title>
+        <ion-title class="text1">{{user.sex}}</ion-title>
+      </ion-col>
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">+2 or Equvalant course:</ion-title>
+        <ion-title class="text1">Computer Science</ion-title>
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">Address:</ion-title>
+        <ion-title class="text1">{{user.address}}</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0 10px 0 10px;" *ngIf="edit1">
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">Mobile Number:</ion-title>
+        <!-- <ion-title class="text1">9072830213</ion-title> -->
+        <ion-input class="text1" type="number" disabled value="9072830213"></ion-input>
+
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">E-mail ID:</ion-title>
+        <ion-input class="text1" disabled value="sulaimankc9@gmail.com"></ion-input>
+      </ion-col>
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">Age:</ion-title>
+        <ion-input class="text1" type="number" placeholder="Age" value="24"></ion-input>
+
+        <!-- <ion-title class="text1">24</ion-title> -->
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">Sex:</ion-title>
+        <ion-input class="text1" placeholder="Sex" value="Male"></ion-input>
+
+        <!-- <ion-title class="text1">Male</ion-title> -->
+      </ion-col>
+      <ion-col size="6" class="left-border">
+        <ion-title class="text">+2 or Equvalant course:</ion-title>
+        <ion-input class="text1" placeholder="+2 or Equvalant course" value="Computer Science"></ion-input>
+
+        <!-- <ion-title class="text1">Computer Science</ion-title> -->
+      </ion-col>
+      <ion-col size="6" class="right-border">
+        <ion-title class="text">Address:</ion-title>
+        <ion-input class="text1" placeholder="Address" value="Kasaragod,Kerala"></ion-input>
+
+        <!-- <ion-title class="text1">Kasaragod,Kerala</ion-title> -->
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

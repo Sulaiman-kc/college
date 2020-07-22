@@ -1,17 +1,83 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header [translucent]="true" >
+  <ion-toolbar style="--background: rgb(189, 22, 22);">
+    <ion-row style="color: white;">
+      <ion-col size="9">
+        <ion-title>
+          About
+        </ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-icon  style="float: right; margin: 0 10px;" (click)="presentPopover()" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="--background: rgb(233, 233, 233);">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;font-weight: 600;">Our Team</ion-card-title>
+      <hr color="red" style="text-align: center;width: 25px;height: 4px;border-radius: 25%;">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Abdulla</ion-title>
+          <ion-title class="text1">Founder</ion-title>
+        </ion-col>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Haani</ion-title>
+          <ion-title class="text1">Co-Founder</ion-title>
+        </ion-col>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Hussain</ion-title>
+          <ion-title class="text1">Co-Founder</ion-title>
+        </ion-col>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Abdulla</ion-title>
+          <ion-title class="text1">Founder</ion-title>
+        </ion-col>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Haani</ion-title>
+          <ion-title class="text1">Co-Founder</ion-title>
+        </ion-col>
+        <ion-col size="4" style="text-align: center;">
+          <img style="width: 60%; border-radius: 100%;border: rgb(172, 172, 172) 2px solid;" src="assets/img/about.jpg">
+          <ion-title class="text">Hussain</ion-title>
+          <ion-title class="text1">Co-Founder</ion-title>
+        </ion-col>
+      </ion-row>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;font-weight: 600;">Mission</ion-card-title>
+      <hr color="red" style="text-align: center;width: 25px;height: 4px;border-radius: 25%;">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p style="text-align: justify;font-size: 11px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus nemo doloremque iste autem facere ipsum reiciendis rerum odio? Placeat nisi a autem sequi soluta exercitationem quia dolores obcaecati, quos laudantium!</p>
+      <br>
+      <p style="text-align: justify;font-size: 11px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, maxime nihil vel placeat et ipsam facilis error, accusantium, dolor iusto rem reiciendis natus ullam alias minima repellendus illum voluptatibus nemo.</p>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;font-weight: 600;">Address</ion-card-title>
+      <hr color="red" style="text-align: center;width: 25px;height: 4px;border-radius: 25%;">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </ion-card-content>
+  </ion-card> -->
 </ion-content>

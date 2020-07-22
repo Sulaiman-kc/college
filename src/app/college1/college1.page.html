@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar style="--background: rgb(189, 22, 22);">
+    <ion-title style="color: white;">{{data.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs" style="color: white;"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background: rgb(230, 230, 230)" >
+  <ion-slides [options]="slideOptsOne">
+    <ion-slide>
+      <img style="height: 200px" src="assets/img/pacollege.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img style="height: 200px" src="assets/img/lbs.png" />
+    </ion-slide>
+    <ion-slide>
+      <img style="height: 200px" src="assets/img/pacollege.jpg" />
+    </ion-slide>
+  </ion-slides>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: left;font-weight: 600;">{{data.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p style="text-align: justify;font-size: 11px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus nemo doloremque iste autem facere ipsum reiciendis rerum odio? Placeat nisi a autem sequi soluta exercitationem quia dolores obcaecati, quos laudantium!</p>
+      <br>
+      <p style="text-align: justify;font-size: 11px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, maxime nihil vel placeat et ipsam facilis error, accusantium, dolor iusto rem reiciendis natus ullam alias minima repellendus illum voluptatibus nemo.</p>
+    </ion-card-content>
+  </ion-card>
+<!-- 
+  <div style="margin-left: 25px;margin-top: 45px;">
+  <h3 style="color: black; font-weight: 600;line-height: 0;">Course</h3>
+  </div> -->
+    <ion-card-header>
+      <ion-card-title style="text-align: left;font-weight: 600;">Course</ion-card-title>
+    </ion-card-header>
+  <ion-row>
+    <ion-col size="6">
+      <ion-card> 
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="desktop-outline"></ion-icon>
+        </ion-card-header>
+        <ion-card-content style="text-align: center;">
+          Computer engineering 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card>
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="layers-outline"></ion-icon>
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: center;">
+          Civil engineering         
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card> 
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="hourglass-outline"></ion-icon>
+        </ion-card-header>
+        <ion-card-content style="text-align: center;">
+          Chemical engineering 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card>
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="build-outline"></ion-icon>
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: center;">
+          Mechanical engineering
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card> 
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+        </ion-card-header>
+        <ion-card-content style="text-align: center;">
+          Electrical engineering 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card>
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="repeat-outline"></ion-icon>
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: center;">
+          Electronic engineering 
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

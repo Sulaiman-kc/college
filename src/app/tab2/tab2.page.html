@@ -1,17 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header [translucent]="true" >
+  <ion-toolbar style="--background: rgb(189, 22, 22);">
+    <ion-row style="color: white;">
+      <ion-col size="9">
+        <ion-title>
+          College
+        </ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-icon  style="float: right; margin: 0 10px;" (click)="presentPopover()" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" style="--background: rgb(233, 233, 233);">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  </ion-header> -->
+  <ion-row>
+    <ion-col>
+      <ion-card (click)="card()"> 
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="map-outline"></ion-icon>
+        </ion-card-header>
+        <ion-card-content style="text-align: center;">
+          College Based
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header style="text-align: center; font-size: 40px;font-weight: 600;">
+          <ion-icon name="school-outline"></ion-icon>
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: center;">
+          Course Based
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-title style="font-size: 25px;font-weight: 600;">
+    Featured
+  </ion-title>
+  <ion-row >
+    <ion-col size="6" *ngFor="let f of featured">
+      <ion-card style="margin: 0; padding: 0;" (click)="college(f)">
+        <ion-card-header style="margin: 10px; padding: 0;;">
+          <img  src="assets/img/pacollege.jpg">
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: center;">
+          {{f.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
